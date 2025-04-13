@@ -1,120 +1,182 @@
-// Comentario de una sola línea
+//Ingresar dos valores y sumarlos.//
+let numero1 = 4;
+let numero2 = 7;
 
-/*
-Comentario de varias líneas
-*/
+let suma = numero1 + numero2;
 
-// Definición de expresiones
-// Definicion de variables
-let x = 5; // Declaración de una variable con valor 5 (usar esta definicion a menos que sea extrictamente necesario usar var)
-var y = 10; // Declaración de una variable con valor 10
-const z = 15; // Declaración de una constante con valor 15 (no se puede cambiar su valor después de la declaración)
+console.log("La suma de", numero1, "y", numero2, "es:", suma);
 
-// Definicion de scope
-let a = 1; // Variable
-console.log(a); // Imprime 1
+//Ingresar tres valores e indicar cual es el mayor y cual el menor.//
+let num1 = 15;
+let num2 = 8;
+let num3 = 23;
 
-x = 5 + 5;
-console.log(x); // Imprime 10
+let mayor = Math.max(num1, num2, num3);
 
-x += 5; // Suma 5 a x (x = x + 5)
-console.log(x); // Imprime 15
+let menor = Math.min(num1, num2, num3);
 
-x -= 2; // Resta 2 a x (x = x - 2)
-console.log(x); // Imprime 13
+console.log("Los números son:",num1, num2, num3);
+console.log("El número mayor es:",mayor);
+console.log("El número menor es:",menor);
 
-let palabra = "Hola"; // Declaración de una variable con valor "Hola"
+//Ingresar una palabra y mostrar: <PALABRA> tiene <n> letras.//
+let palabra = "Aeropuerto";
 
-// Operacion de strings
-palabra += " Mundo"; // Concatenación de cadenas (palabra = palabra + " Mundo")
-console.log(palabra); // Imprime "Hola Mundo"
+let cantidad = palabra.length;
 
-let texto = "Puntos:";
-let mezcla = texto + z;
-console.log(mezcla); // Imprime "Hola Mundo15"
+console.log(palabra + " tiene " + cantidad + " letras.");
 
-let nombre1 = "Juan tiene " + x + " años"; // Concatenación de cadenas (nombre1 = "Juan tiene " + x + " años")
-console.log(nombre1); // Imprime "Juan tiene 13 años"
+//Ingresar un número e indicar si es par.//
+let numero = 13;
 
-// template strings
-let nombre2 = `Juan tiene ${x} años`;
-console.log(nombre2); // Imprime "Juan tiene 13 años"
-
-// Condicionales
-let edad = 22; // Declaración de una variable con valor 22
-if (edad >= 18) {
-  // Si la edad es mayor o igual a 18
-  console.log("Eres mayor de edad"); // Imprime "Eres mayor de edad"
+if (numero % 2 === 0) {
+  console.log(numero + " es un número par.");
 } else {
-  // Si no
-  console.log("Eres menor de edad"); // Imprime "Eres menor de edad"
+  console.log(numero + " es un número impar.");
 }
 
-if (edad == 18) {
-  // Si la edad es igual a 18
-  console.log("Tienes 18 años"); // Imprime "Tienes 18 años"
+//Ingresar una palabra y un numero "n". Repetir la palabra "n" veces.//
+let palabrarep = "lapicera";
+let repetir = 5;
+for (let i = 0; i < repetir; i++) {
+  console.log(palabrarep);
 }
 
-if (edad === 18) {
-  // Si la edad es estrictamente igual a 18 (tipo y valor)
-  console.log("Tienes 18 años"); // Imprime "Tienes 18 años"
-}
 
-if (edad != 18) {
-  // Si la edad es diferente a 18
-  console.log("No tienes 18 años"); // Imprime "No tienes 18 años"
-}
+//Ingresar dos valores enteros y enumerar los elementos que los separan.//
+let n1 = 14;
+let n2 = 8;
 
-if (edad !== 18) {
-  // Si la edad es estrictamente diferente a 18 (tipo y valor)
-  console.log("No tienes 18 años"); // Imprime "No tienes 18 años"
-}
-
-// bucles
-// for
-for (var i = 0; i < 5; i++) {
-  // i = i + 1
-  // Bucle for que se repite 5 veces
-  console.log(i); // Imprime el valor de i
-}
-
-// while
-console.log("Bucle while"); // Imprime "Bucle while"
-while (i < 10) {
-  // Bucle while que se repite mientras i sea menor que 10
-  console.log(i); // Imprime el valor de i
-  i++; // Incrementa i en 1
-}
-
-for (let d = 0; d <= 5; d++) {
-  for (let u = 1; u <= 9; u++) {
-    console.log("Numero " + d + u); // Imprime el valor decena sumado al de unidad
+if (n1 < n2) {
+  for (let i = n1 + 1; i < n2; i++) {
+    console.log(i);
+  }
+} if (n2 < n1) {
+  for (let i = n2 + 1; i < n1; i++) {
+    console.log(i);
   }
 }
 
-// funciones
-// Definición de una función que suma dos números
-// declaracion de la funcion
-function suma(a, b) {
-  let resultado = a + b; // Suma a y b
-  return resultado; // Devuelve el resultado
+//Ingresar dos números y mostrar los múltiplos de 3 comprendidos entre ambos.//
+let numA = 11;
+let numB = 24;
+
+let meno = Math.min(numA, numB);
+let mayo = Math.max(numA, numB);
+
+for (let i = meno + 1; i < mayo; i++) {
+  if (i % 3 === 0) {
+    console.log(i);
+  }
 }
 
-// Ejecucion de la funcion
-let res = suma(5, 10); // Llama a la función suma con los argumentos 5 y 10
-console.log(res); // Imprime el resultado de la suma (50)
+//Ingresar dos números y mostrar los múltiplos de 3 comprendidos entre ambos.//
 
-function estaVivo() {
-  if (vida > 0) {
-    console.log("Estoy vivo"); // Imprime "Estoy vivo"
-    return true; // Devuelve verdadero si vida es mayor que 0
+for (let i = 1; i < 100; i++) {
+  if (i % 2 === 0 && i % 5 === 0) {
+    console.log(i);
+  }
+}
+
+
+//Obtener la suma de los elementos de un array.//
+
+let numerosArray1 = [42, 43, 44, 45, 46];
+let sumaArray = 0;
+for (let i = 0; i < numerosArray1.length; i++) {
+  sumaArray += numerosArray1[i];
+}
+console.log("La suma de los elementos del array (", numerosArray1, ") es:", sumaArray);
+
+//Sumar solo los elementos pares de un array.//
+let numerosArray2 = [22, 23, 24, 25, 26];	
+let sumaPares = 0;
+for (let i = 0; i < numerosArray2.length; i++) {
+  if (numerosArray2[i] % 2 === 0) {
+    sumaPares += numerosArray2[i];
+  }
+}
+console.log("La suma de los elementos pares del array (", numerosArray2, ") es:", sumaPares);
+
+//Ingresar una palabra e identificar las letras distintas y sus repeticiones. Por ejemplo: PALA (P = 1, A = 2, L = 1). Utilizar un objeto literal//
+let palabraContar = "dinosaurios";
+let contadorLetras = {};
+for (let letra of palabraContar) {
+  if (contadorLetras[letra]) {
+    contadorLetras[letra]++;
   } else {
-    console.log("Estoy muerto"); // Imprime "Estoy muerto"
-    return false; // Devuelve falso si vida es menor o igual a 0
+    contadorLetras[letra] = 1;
   }
 }
+console.log("La palabra", palabraContar, "tiene las siguientes letras:", contadorLetras);
 
-var vida = 1; // Declaración de una variable con valor 1
-estaVivo(); // Llama a la función estaVivo
-vida -= 1; // Resta 1 a vida
-estaVivo(); // Llama a la función estaVivo
+//Crear un objeto literal con las siguiente propiedades: nombre, sexo biológico y edad. Agregar varios elementos a una lista. Obtener el promedio de edad, el nombre de la mujer con mayor edad, el nombre del hombre con menor edad, el promedio de edad de las mujeres.//
+
+let personas = [
+  { nombre: "Lucía", sexo: "F", edad: 25 },
+  { nombre: "Lautaro", sexo: "M", edad: 18 },
+  { nombre: "Jerónimo", sexo: "M", edad: 30 },
+  { nombre: "Leonardo", sexo: "M", edad: 22 },
+  { nombre: "Julieta", sexo: "F", edad: 38 }
+];
+
+// Promedio de edad
+let sumaEdades = 0;
+for (let i = 0; i < personas.length; i++) {
+  sumaEdades += personas[i].edad;
+}
+let promedioGeneral = sumaEdades / personas.length;
+console.log("Promedio general de edad:", promedioGeneral);
+
+// Mujer con mayor edad
+let mujerMayor = null;
+for (let i = 0; i < personas.length; i++) {
+  if (personas[i].sexo === "F") {
+    if (mujerMayor === null || personas[i].edad > mujerMayor.edad) {
+      mujerMayor = personas[i];
+    }
+  }
+}
+  console.log("Mujer con mayor edad:", mujerMayor.nombre);
+
+
+// Hombre con menor edad
+let hombreMenor = null;
+for (let i = 0; i < personas.length; i++) {
+  if (personas[i].sexo === "M") {
+    if (hombreMenor === null || personas[i].edad < hombreMenor.edad) {
+      hombreMenor = personas[i];
+    }
+  }
+}
+  console.log("Hombre con menor edad:", hombreMenor.nombre);
+
+
+// Promedio de edad de las mujeres
+let sumaEdadesMujeres = 0;
+let cantidadMujeres = 0;
+for (let i = 0; i < personas.length; i++) {
+  if (personas[i].sexo === "F") {
+    sumaEdadesMujeres += personas[i].edad;
+    cantidadMujeres++;
+  }
+}
+  let promedioMujeres = sumaEdadesMujeres / cantidadMujeres;
+  console.log("Promedio de edad de las mujeres:", promedioMujeres);
+ 
+//Crear una funcion que reciba 3 parametros: minimo, maximo y divisor. Devolver una lista con los divisores del numero ingresado.//
+
+function obtenerDivisibles(minimo, maximo, divisor) {
+  let lista = [];
+
+  for (let i = minimo; i <= maximo; i++) {
+    if (i % divisor === 0) {
+      lista.push(i);
+    }
+  }
+
+  return lista;
+}
+
+let resultado = obtenerDivisibles(1, 65, 5);
+console.log("Numeros divisibles por 5 entre 1 y 65:", resultado);
